@@ -1,0 +1,127 @@
+@startuml classes
+
+class DefaultEntity {
+    - id : Long
+    - dataCadastro : LocalDateTime
+    - dataAlteracao : LocalDateTime
+}
+
+class Usuario {
+    - nome : String
+    - sobrenome : String
+    - email : String
+    - senha : String
+}
+
+class Endereco {
+    - cep : String
+    - estado : String
+    - cidade : String
+    - bairro : String
+    - rua : String
+    - numero : String
+    - complemento : String
+}
+
+class Relogio {
+    - modelo : String
+    - material : String
+    - preco : double
+    - desconto : double
+    - estoque : int
+}
+
+enum TipoRelogio {
+    DIGITAL
+    ANALOGICO
+}
+
+class Marca {
+    - nome : String
+    - descricao : String
+    - fundador : String
+    - anoFundacao : LocalDate
+    - paisOrigem : String
+}
+
+class Fornecedor {
+    - nome : String
+    - cnpj : String
+    - email : String
+}
+
+class Telefone {
+    - codigoArea : String
+    - numero : String
+}
+
+class Venda {
+    - valorTotal : double
+}
+
+class ItemVenda {
+    - preco : double
+}
+
+class Pedido {
+    - valorTotal : double
+}
+
+class ItemPedido {
+    - preco : double
+}
+
+class Funcionario {
+    - nome : String
+    - sobrenome : String
+    - email : String
+    - senha : String
+}
+
+class Pagamento {
+    - valor : double
+    - complemento : String
+}
+
+enum StatusPagamento {
+    PENDENTE
+    CONCLUIDO
+    CANCELADO
+}
+
+enum FormaPagamento {
+    CARTAO_DEBITO
+    CARTAO_CREDITO
+    BOLETO
+    PIX
+}
+
+' ----------------------------------------- '
+
+Usuario --> Telefone
+Usuario --> Endereco
+
+Funcionario --> Telefone
+
+Fornecedor --> Telefone
+Fornecedor --> Endereco
+
+Relogio --> TipoRelogio
+Relogio --> Marca
+
+Venda --> Usuario
+Venda --> Pagamento
+Venda --> ItemVenda
+
+ItemVenda --> Relogio
+
+Pedido --> Fornecedor
+Pedido --> Pagamento
+Pedido --> ItemPedido
+
+ItemPedido --> Relogio
+
+Pagamento --> StatusPagamento
+Pagamento --> FormaPagamento
+
+@enduml

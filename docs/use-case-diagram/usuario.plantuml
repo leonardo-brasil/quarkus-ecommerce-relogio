@@ -1,0 +1,19 @@
+@startuml usuario
+
+actor usuario
+
+' CRUD de Usuário
+usuario --> (cadastrar)
+usuario --> (autenticar)
+usuario --> (recuperar senha)
+usuario --> (atualizar conta)
+usuario --> (consultar pedidos)
+usuario --> (adicionar na lista de desejo)
+
+usuario --> (consultar marcas)
+usuario --> (consultar relogios)
+usuario --> (realizar compra)
+
+(realizar compra) <|-- (escolher forma de pagamento)
+
+@enduml

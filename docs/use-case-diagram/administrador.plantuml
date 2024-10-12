@@ -1,0 +1,11 @@
+@startuml administrador
+
+actor administrador
+
+' CRUD funcionario
+administrador --> (cadastrar funcionario)
+administrador --> (atualizar funcionario)
+administrador --> (excluir funcionario)
+administrador --> (consultar funcionario)
+
+@enduml

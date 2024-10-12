@@ -1,0 +1,31 @@
+@startuml funcionario
+
+actor funcionario
+
+' CRUD de marcas
+funcionario --> (cadastrar marca)
+funcionario --> (atualizar marca)
+funcionario --> (excluir marca)
+funcionario --> (consultar marcas)
+
+' CRUD de relogio
+funcionario --> (cadastrar relogio)
+funcionario --> (atualizar relogio)
+funcionario --> (excluir relogio)
+funcionario --> (consultar relogio)
+
+' CRUD de fornecedor
+funcionario --> (cadastrar fornecedor)
+funcionario --> (atualizar fornecedor)
+funcionario --> (excluir fornecedor)
+funcionario --> (consultar fornecedor)
+
+' CRUD pedido
+funcionario --> (cadastrar pedido)
+funcionario --> (atualizar pedido)
+funcionario --> (excluir pedido)
+funcionario --> (consultar pedidos)
+
+funcionario --> (consultar usuarios)
+
+@enduml
