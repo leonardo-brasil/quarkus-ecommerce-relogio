@@ -9,7 +9,7 @@ public record MarcaResponseDTO(
     String nome,
     String descricao,
     String fundador,
-    LocalDate anoFundacao,
+    LocalDate dataFundacao,
     String paisOrigem
 ) {
 
@@ -19,7 +19,7 @@ public record MarcaResponseDTO(
             marca.getNome(),
             marca.getDescricao(),
             marca.getFundador(),
-            marca.getAnoFundacao(),
+            marca.getDataFundacao(),
             marca.getPaisOrigem()
         );
     }

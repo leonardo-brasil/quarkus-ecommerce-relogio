@@ -6,7 +6,7 @@ public record MarcaRequestDTO(
     String nome,
     String descricao,
     String fundador,
-    LocalDate anoFundacao,
+    LocalDate dataFundacao,
     String paisOrigem
 ) {
 

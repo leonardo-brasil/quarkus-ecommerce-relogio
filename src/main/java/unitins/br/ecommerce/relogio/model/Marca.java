@@ -11,7 +11,7 @@ public class Marca extends DefaultEntity {
     private String nome;
     private String descricao;
     private String fundador;
-    private LocalDate anoFundacao;
+    private LocalDate dataFundacao;
     private String paisOrigem;
 
     public Marca() {}
@@ -20,7 +20,7 @@ public class Marca extends DefaultEntity {
         this.nome = nome;
         this.descricao = descricao;
         this.fundador = fundador;
-        this.anoFundacao = anoFundacao;
+        this.dataFundacao = anoFundacao;
         this.paisOrigem = paisOrigem;
     }
 
@@ -29,7 +29,7 @@ public class Marca extends DefaultEntity {
         this.nome = dto.nome();
         this.descricao = dto.descricao();
         this.fundador = dto.fundador();
-        this.anoFundacao = dto.anoFundacao();
+        this.dataFundacao = dto.dataFundacao();
         this.paisOrigem = dto.paisOrigem();
 
     }
@@ -58,12 +58,12 @@ public class Marca extends DefaultEntity {
         this.fundador = fundador;
     }
 
-    public LocalDate getAnoFundacao() {
-        return anoFundacao;
+    public LocalDate getDataFundacao() {
+        return dataFundacao;
     }
 
-    public void setAnoFundacao(LocalDate anoFundacao) {
-        this.anoFundacao = anoFundacao;
+    public void setDataFundacao(LocalDate anoFundacao) {
+        this.dataFundacao = anoFundacao;
     }
 
     public String getPaisOrigem() {
@@ -74,13 +74,12 @@ public class Marca extends DefaultEntity {
         this.paisOrigem = paisOrigem;
     }
 
-    // Método que atualiza o objeto atual com as informações do DTO
     public void absorv(MarcaRequestDTO dto) {
 
         this.nome = dto.nome();
         this.descricao = dto.descricao();
         this.fundador = dto.fundador();
-        this.anoFundacao = dto.anoFundacao();
+        this.dataFundacao = dto.dataFundacao();
         this.paisOrigem = dto.paisOrigem();
 
     }
