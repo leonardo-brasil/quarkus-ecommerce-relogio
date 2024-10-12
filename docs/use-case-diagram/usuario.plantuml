@@ -3,10 +3,10 @@
 actor usuario
 
 ' CRUD de Usuário
-usuario --> (cadastrar)
+usuario --> (cadastrar) #Red
 usuario --> (autenticar)
 usuario --> (recuperar senha)
-usuario --> (atualizar conta)
+usuario --> (atualizar conta) #Red
 usuario --> (consultar pedidos)
 usuario --> (adicionar na lista de desejo)
 

@@ -3,29 +3,30 @@
 actor funcionario
 
 ' CRUD de marcas
-funcionario --> (cadastrar marca)
-funcionario --> (atualizar marca)
-funcionario --> (excluir marca)
-funcionario --> (consultar marcas)
+funcionario --> (cadastrar marca) #Blue
+funcionario --> (atualizar marca) #Blue
+funcionario --> (excluir marca) #Blue
+funcionario --> (consultar marcas) #Blue
 
 ' CRUD de relogio
-funcionario --> (cadastrar relogio)
-funcionario --> (atualizar relogio)
-funcionario --> (excluir relogio)
-funcionario --> (consultar relogio)
+funcionario --> (cadastrar relogio) #Blue
+funcionario --> (atualizar relogio) #Blue
+funcionario --> (excluir relogio) #Blue
+funcionario --> (consultar relogio) #Blue
 
 ' CRUD de fornecedor
-funcionario --> (cadastrar fornecedor)
-funcionario --> (atualizar fornecedor)
-funcionario --> (excluir fornecedor)
-funcionario --> (consultar fornecedor)
+funcionario --> (cadastrar fornecedor) #Blue
+funcionario --> (atualizar fornecedor) #Blue
+funcionario --> (excluir fornecedor) #Blue
+funcionario --> (consultar fornecedor) #Blue
 
 ' CRUD pedido
-funcionario --> (cadastrar pedido)
-funcionario --> (atualizar pedido)
-funcionario --> (excluir pedido)
-funcionario --> (consultar pedidos)
+funcionario --> (cadastrar pedido) #Red
+funcionario --> (atualizar pedido) #Red
+funcionario --> (excluir pedido) #Red
+funcionario --> (consultar pedidos) #Red
 
-funcionario --> (consultar usuarios)
+funcionario --> (consultar usuarios) #Red
+funcionario --> (excluir usuario) #Red
 
 @enduml

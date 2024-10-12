@@ -3,9 +3,9 @@
 actor administrador
 
 ' CRUD funcionario
-administrador --> (cadastrar funcionario)
-administrador --> (atualizar funcionario)
-administrador --> (excluir funcionario)
-administrador --> (consultar funcionario)
+administrador --> (cadastrar funcionario) #Red
+administrador --> (atualizar funcionario) #Red
+administrador --> (excluir funcionario) #Red
+administrador --> (consultar funcionario) #Red
 
 @enduml
