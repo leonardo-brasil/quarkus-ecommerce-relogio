@@ -6,6 +6,11 @@ class DefaultEntity {
     - dataAlteracao : LocalDateTime
 }
 
+class Administrador {
+    - email : String
+    - senha : String
+}
+
 class Usuario {
     - nome : String
     - sobrenome : String
@@ -57,18 +62,22 @@ class Telefone {
 
 class Venda {
     - valorTotal : double
+    - data : LocalDate
 }
 
 class ItemVenda {
     - preco : double
+    - quantidade : int
 }
 
 class Pedido {
     - valorTotal : double
+    - data : LocalDate
 }
 
 class ItemPedido {
     - preco : double
+    - quantidade : int
 }
 
 class Funcionario {
@@ -80,7 +89,8 @@ class Funcionario {
 
 class Pagamento {
     - valor : double
-    - complemento : String
+    - descricao : String
+    - dataPagamento : LocalDate
 }
 
 enum StatusPagamento {
@@ -96,12 +106,11 @@ enum FormaPagamento {
     PIX
 }
 
-' ----------------------------------------- '
-
 Usuario --> Telefone
 Usuario --> Endereco
 
 Funcionario --> Telefone
+Funcionario --> Endereco
 
 Fornecedor --> Telefone
 Fornecedor --> Endereco
