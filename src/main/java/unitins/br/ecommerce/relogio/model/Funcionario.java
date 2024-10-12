@@ -1,5 +1,6 @@
 package unitins.br.ecommerce.relogio.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
 import unitins.br.ecommerce.relogio.DTO.FuncionarioRequestDTO;
@@ -11,9 +12,9 @@ public class Funcionario extends DefaultEntity {
     private String sobrenome;
     private String email;
     private String senha;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Telefone telefone;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
 
     public Funcionario() {}

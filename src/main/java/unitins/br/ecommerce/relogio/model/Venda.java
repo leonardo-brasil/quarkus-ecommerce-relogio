@@ -3,15 +3,22 @@ package unitins.br.ecommerce.relogio.model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Venda extends DefaultEntity {
     
     private Double valorTotal;
     private LocalDate data;
-    @OneToMany
+    @ManyToOne
+    private Usuario usuario;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Pagamento pagamento;
+    @OneToMany(cascade = CascadeType.ALL)
     private ArrayList<ItemVenda> itensVenda;
 
     public Double getValorTotal() {

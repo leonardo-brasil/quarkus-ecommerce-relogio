@@ -45,7 +45,7 @@ class Marca {
     - nome : String
     - descricao : String
     - fundador : String
-    - anoFundacao : LocalDate
+    - dataFundacao : LocalDate
     - paisOrigem : String
 }
 
