@@ -1,6 +1,7 @@
 package unitins.br.ecommerce.relogio.model;
 
 import jakarta.persistence.Entity;
+import unitins.br.ecommerce.relogio.DTO.EnderecoRequestDTO;
 
 @Entity
 public class Endereco extends DefaultEntity {
@@ -12,6 +13,32 @@ public class Endereco extends DefaultEntity {
     private String rua;
     private String numero;
     private String complemento;
+
+    public Endereco() {}
+
+    public Endereco(String cep, String estado, String cidade, String bairro, String rua, String numero, String complemento) {
+
+        this.cep = cep;
+        this.estado = estado;
+        this.cidade = cidade;
+        this.bairro = bairro;
+        this.rua = rua;
+        this.numero = numero;
+        this.complemento = complemento;
+
+    }
+
+    public Endereco(EnderecoRequestDTO dto) {
+
+        this.cep = dto.cep();
+        this.estado = dto.estado();
+        this.cidade = dto.cidade();
+        this.bairro = dto.bairro();
+        this.rua = dto.rua();
+        this.numero = dto.numero();
+        this.complemento = dto.complemento();
+
+    }
 
     public String getCep() {
         return cep;

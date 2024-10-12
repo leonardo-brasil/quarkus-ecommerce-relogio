@@ -2,6 +2,7 @@ package unitins.br.ecommerce.relogio.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
+import unitins.br.ecommerce.relogio.DTO.FornecedorRequestDTO;
 
 @Entity
 public class Fornecedor extends DefaultEntity {
@@ -13,6 +14,28 @@ public class Fornecedor extends DefaultEntity {
     private Telefone telefone;
     @OneToOne
     private Endereco endereco;
+
+    public Fornecedor() {}
+
+    public Fornecedor(String nome, String cnpj, String email, Telefone telefone, Endereco endereco) {
+
+        this.nome = nome;
+        this.cnpj = cnpj;
+        this.email = email;
+        this.telefone = telefone;
+        this.endereco = endereco;
+
+    }
+
+    public Fornecedor(FornecedorRequestDTO dto) {
+
+        this.nome = dto.nome();
+        this.cnpj = dto.cnpj();
+        this.email = dto.email();
+        this.telefone = new Telefone(dto.telefone());
+        this.endereco = new Endereco(dto.endereco());
+
+    }
 
     public String getNome() {
         return nome;
@@ -52,6 +75,16 @@ public class Fornecedor extends DefaultEntity {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    public void absorv(FornecedorRequestDTO dto) {
+
+        this.nome = dto.nome();
+        this.cnpj = dto.cnpj();
+        this.email = dto.email();
+        this.telefone = new Telefone(dto.telefone());
+        this.endereco = new Endereco(dto.endereco());
+
     }
 
 }
